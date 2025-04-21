@@ -217,9 +217,8 @@ footer a:hover {
 .terminos-main {
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 70vh;
   padding: 2em;
+  margin-top: 70px;
 }
 
 .terminos-parrafo {
@@ -227,8 +226,9 @@ footer a:hover {
   color: white;
   font-size: 1.2rem;
   line-height: 1.6;
-  text-align: center;
+  text-align: left;
 }
+
 
 @media (max-width: 600px) {
   .terminos-main {
