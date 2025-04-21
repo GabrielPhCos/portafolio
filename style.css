@@ -206,6 +206,21 @@ footer {
 footer a {
   color: #ccc;
   text-decoration: none;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+footer a svg {
+  display: block;
+  margin: 0 auto 0.5em;
+  transition: transform 0.2s ease;
+  width: 48px;
+  height: 48px;
+}
+
+footer a:hover svg {
+  transform: scale(1.2);
+  fill: #fdfdfd;
 }
 
 footer a:hover {
@@ -229,7 +244,6 @@ footer a:hover {
   text-align: left;
 }
 
-
 @media (max-width: 600px) {
   .terminos-main {
     padding: 1em;
@@ -245,16 +259,3 @@ a.link-destacado {
   color: #00aced; /* celeste tipo Instagram */
   text-decoration: underline;
 }
-
-footer a svg {
-  margin: 0 10px;
-  vertical-align: middle;
-  transition: transform 0.2s ease;
-}
-
-footer a:hover svg {
-  transform: scale(1.2);
-  fill: #fdfdfd;
-}
-
-
