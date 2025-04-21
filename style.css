@@ -1,47 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-/* Añade esto al principio de tu CSS */
+
+/* Reset básico */
 * {
   padding: 0;
   margin: 0;
   text-decoration: none;
   list-style: none;
+  box-sizing: border-box;
 }
 
 body {
-  overflow-x: hidden; /* Elimina cualquier barra de desplazamiento horizontal */
-}
-
-html, body {
-  height: 100%;
-  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+  background-color: #1c1c1c;
+  color: white;
   display: flex;
   flex-direction: column;
-  font-family: Arial, sans-serif;
-  background-color: #1c1c1c;
+  height: 100%;
 }
 
-a,li{
-  font-family: 'roboto', sans-serif;
+html {
+  height: 100%;
+}
+
+a, li {
+  font-family: 'Roboto', sans-serif;
   color: white;
-
 }
 
-.logo-header img{
+.logo-header img {
   width: 50px;
 }
 
-
-/* Estilos generales */
+/* Encabezado y navegación */
 header {
   background-color: #222;
-  color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: .5rem 2rem;
 }
 
-.nav-menu ul{
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #111;
+  z-index: 1000;
+}
+
+.nav-menu ul {
   display: flex;
   align-items: center;
 }
@@ -49,69 +58,63 @@ header {
 .nav-menu li {
   margin-right: 1.5rem;
 }
-.nav-menu a:hover{
+
+.nav-menu a:hover {
   color: yellow;
 }
 
-.menu-icon img{
-    width: 30px;
-    height: 30px;
-    border-radius: 2px;
-}
-.menu-icon, #check{
-    display: none;
+.menu-icon img {
+  width: 30px;
+  height: 30px;
+  border-radius: 2px;
 }
 
-@media (max-width:768px){
-    .checkbtn{
-        display: block;
-    }
-    .menu-icon{
-        display: block;
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        cursor: pointer;
-    }
-    .nav-menu ul{
-        display: block;
-        position: fixed;
-        top:70px;
-        left:-100%;
-        background: #222;
-        width: 100%;
-        height: 100vh;
-        right: 0;
-    }
-    .nav-menu ul li{
-        padding: 2rem;
-        display: flex;
-        justify-content: center;
-        margin: 0;
-    }
-    .nav-menu ul li:last-child{
-        background: none;
-        padding: 1rem;
-    }
-    #check:checked ~ ul{
-        left: 0;
-        transition: all .25s;
-    }
+.menu-icon, #check {
+  display: none;
 }
 
-
-
-main {
-  flex: 1; /* Esto empuja el footer hacia abajo si el contenido no ocupa todo el alto */
-  padding: 2em;
+@media (max-width: 768px) {
+  .checkbtn {
+    display: block;
+  }
+  .menu-icon {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1100;
+  }
+  .nav-menu ul {
+    display: block;
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    background: #222;
+    width: 100%;
+    height: 100vh;
+    right: 0;
+    transition: all 0.25s;
+  }
+  .nav-menu ul li {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+  .nav-menu ul li:last-child {
+    background: none;
+    padding: 1rem;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
 }
 
-
-
-/* Contenido principal */
 main {
   flex: 1;
   padding: 2em;
+  margin-top: 70px;
 }
 
 section {
@@ -128,7 +131,6 @@ section {
 }
 
 .grid img {
- /* filter: grayscale(0.9) opacity(0.9); */
   border: 2px solid transparent;
   transition: all 0.15s ease-in-out;
 }
@@ -140,6 +142,7 @@ section {
   border: 2px solid #000;
 }
 
+/* Lightbox */
 .lightbox {
   position: fixed;
   z-index: 999999;
@@ -147,7 +150,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0 0 0 / 80%);
+  background: rgba(0, 0, 0, 0.8);
   display: none;
 }
 
@@ -178,9 +181,7 @@ section {
   overflow: hidden;
 }
 
-
-
-/* Estilos para la sección de valores y redes sociales */
+/* Secciones de texto */
 .valores, .redes {
   max-width: 600px;
   margin: auto;
@@ -193,15 +194,13 @@ section {
   color: white;
 }
 
-
-
 /* Footer */
 footer {
   background-color: #111;
   color: white;
   text-align: center;
   padding: 1em;
-  margin-top: auto; /* Se ajusta automáticamente al final */
+  margin-top: auto;
 }
 
 footer a {
@@ -214,6 +213,38 @@ footer a:hover {
   text-decoration: underline;
 }
 
+/* Términos y condiciones */
+.terminos-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 2em;
+}
+
+.terminos-parrafo {
+  max-width: 700px;
+  color: white;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .terminos-main {
+    padding: 1em;
+  }
+  .terminos-parrafo {
+    font-size: 1rem;
+    padding: 0 1em;
+    text-align: left;
+  }
+}
+
+a.link-destacado {
+  color: #00aced; /* celeste tipo Instagram */
+  text-decoration: underline;
+}
 
 
 
