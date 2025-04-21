@@ -246,6 +246,15 @@ a.link-destacado {
   text-decoration: underline;
 }
 
+footer a svg {
+  margin: 0 10px;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
 
+footer a:hover svg {
+  transform: scale(1.2);
+  fill: #fdfdfd;
+}
 
 
