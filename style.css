@@ -183,7 +183,7 @@ section {
 
 /* Secciones de texto */
 .valores, .redes {
-  max-width: 600px;
+  max-width: 1500px;
   margin: auto;
   line-height: 1.6;
 }
@@ -228,6 +228,43 @@ footer a:hover {
   text-decoration: underline;
 }
 
+/* valores que los divide y con bordes */
+
+.contenedor-valores {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+  margin: 2em auto;
+  max-width: 1400px;
+  padding: 0 1em;
+}
+
+.columna {
+  width: 31%;
+  background-color: #2a2a2a;
+  padding: 1.5em;
+  border: 1px solid #444;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .columna {
+    width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .columna {
+    width: 100%;
+  }
+}
+
+
+
+
 /* Términos y condiciones */
 .terminos-main {
   display: flex;
@@ -259,3 +296,5 @@ a.link-destacado {
   color: #00aced; /* celeste tipo Instagram */
   text-decoration: underline;
 }
+
+
