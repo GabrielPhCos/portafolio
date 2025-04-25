@@ -1,33 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Inicio - Portafolio Fotográfico</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Footer</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #111;
+      font-family: 'Roboto', sans-serif;
+      text-align: center;
+      color: white;
+    }
+
+    .footer-contenedor {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1em;
+      gap: 0.8em;
+    }
+
+    .redes {
+      display: flex;
+      gap: 1.2em;
+    }
+
+    .redes a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .redes svg {
+      width: 32px;
+      height: 32px;
+      transition: transform 0.2s ease;
+    }
+
+    .redes svg path {
+      fill: currentColor;
+    }
+
+    .redes a:hover svg {
+      transform: scale(1.2);
+    }
+
+    .copyright {
+      font-size: 0.9em;
+      color: #ccc;
+    }
+  </style>
 </head>
-  <body>
-    <footer>
+<body>
+  <div class="footer-contenedor">
+    <div class="redes">
       <a href="https://www.instagram.com/gabo.ph.cos/" target="_blank" aria-label="Instagram">
-        <svg width="24" height="24" fill="white" viewBox="0 0 448 512">
+        <svg viewBox="0 0 448 512">
           <path d="M224,202.66A53.34,53.34,0,1,0,277.34,256,53.38,53.38,0,0,0,224,202.66ZM398.8,112A54.77,54.77,0,1,0,343.9,57.15,54.77,54.77,0,0,0,398.8,112ZM224,137.13A118.87,118.87,0,1,0,342.87,256,118.87,118.87,0,0,0,224,137.13Zm124.71,220.14a83.77,83.77,0,0,1-83.77,83.77H182.06a83.77,83.77,0,0,1-83.77-83.77V182.06a83.77,83.77,0,0,1,83.77-83.77h82.88a83.77,83.77,0,0,1,83.77,83.77Z"/>
         </svg>
       </a>
-
       <a href="https://www.tiktok.com/@gabophcos" target="_blank" aria-label="TikTok">
-        <svg width="24" height="24" fill="white" viewBox="0 0 448 512">
+        <svg viewBox="0 0 448 512">
           <path d="M448,209.2v99.2a165.69,165.69,0,0,1-99.2-31.7V404a108,108,0,1,1-108-108h0V209.2a165.86,165.86,0,0,0,99.2,31.7V104H320V32h56.4a71.55,71.55,0,0,0,71.6,72V209.2Z"/>
         </svg>
       </a>
-
       <a href="https://www.threads.net/@gabo.ph.cos" target="_blank" aria-label="Threads">
-        <svg width="24" height="24" fill="white" viewBox="0 0 448 512">
+        <svg viewBox="0 0 448 512">
           <path d="M224 32C100.3 32 0 132.3 0 256s100.3 224 224 224 224-100.3 224-224S347.7 32 224 32zm65.3 312.3c-4.6 13.6-13.4 25.4-25.1 33.6-11.5 7.8-25.2 11.8-39.5 11.8-19.4 0-37.1-7.7-50.6-21.6-13.5-13.8-21.1-32.3-21.1-51.9v-1.8c0-25.3 11.6-49.1 31.3-65.1-8.3-10.2-12.6-22.9-12.6-36.1 0-32.8 26.7-59.4 59.4-59.4s59.4 26.7 59.4 59.4c0 19.1-9 36.9-24.4 48.3 16.4 14.7 27.3 35.2 29.3 57.4.9 11-.2 22.1-5.1 32.4z"/>
         </svg>
       </a>
-
+    </div>
+    <div class="copyright">
       <p>&copy; 2025 Gabriel photo cosplay - Fotografía y Video</p>
-    </footer>
-  </body>
+    </div>
+  </div>
+</body>
 </html>
+
