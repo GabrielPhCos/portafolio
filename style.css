@@ -175,8 +175,8 @@ section {
 }
 
 .lightbox img {
-  max-height: 75%;
-  max-width: 75%;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .overflow-hidden {
