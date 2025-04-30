@@ -353,13 +353,35 @@ iframe.footer {
 .columna {
   flex: 1 1 300px;
   max-width: 100%;
-  background-color: #2a2a2a;
   padding: 1.5em;
   border: 1px solid #444;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   text-align: center;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Parallax simple */
+  background-attachment: fixed; 
+  background-position: center center;
 }
+
+/* Imagen de fondo por columna */
+.columna1 {
+  background-image: url('https://i.imgur.com/CjhcsKJ.jpg');
+}
+
+.columna2 {
+  background-image: url('https://i.imgur.com/O8UnScQ.jpg');
+}
+
+.columna3 {
+  background-image: url('https://i.imgur.com/ZgvF6xo.jpg');
+}
+
 
 @media (max-width: 900px) {
   .columna {
@@ -375,7 +397,7 @@ iframe.footer {
     justify-content: center;
   }
 }
-
+/*para destacar un link*/
 a.link-destacado {
   color: #00aced;
   text-decoration: underline;
