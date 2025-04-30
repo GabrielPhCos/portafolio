@@ -7,6 +7,8 @@
   <style>
     body {
       margin: 0;
+      padding: 0;
+      overflow: hidden;
       background-color: #111;
       font-family: 'Roboto', sans-serif;
       text-align: center;
@@ -88,6 +90,15 @@
       <p>&copy; 2025 Gabriel photo cosplay - Fotografía y Video</p>
     </div>
   </div>
+  <script>
+  function sendHeight() {
+    const height = document.body.scrollHeight;
+    window.parent.postMessage({ type: "footerHeight", height: height }, "*");
+  }
+
+  window.addEventListener("load", sendHeight);
+  window.addEventListener("resize", sendHeight);
+</script>
 </body>
 </html>
 

@@ -1,12 +1,13 @@
+// Lightbox para imágenes con data-lightbox
 const images = document.querySelectorAll("img[data-lightbox]");
 
 if (images) {
-  // Load the lightbox
+  // Crear el contenedor del lightbox
   const lightbox = document.createElement("div");
   lightbox.classList.add("lightbox");
   document.body.appendChild(lightbox);
 
-  // Load the close button
+  // Crear botón de cerrar
   const lightboxCloseButton = document.createElement("button");
   lightboxCloseButton.classList.add("lightbox__close");
   lightboxCloseButton.innerHTML = "X";
@@ -21,7 +22,6 @@ if (images) {
       }
       lightbox.appendChild(img);
       lightbox.appendChild(lightboxCloseButton);
-      // Add a class to body
       document.body.classList.add("overflow-hidden");
     });
   });
@@ -38,3 +38,13 @@ if (images) {
   });
 }
 
+<script>
+  window.addEventListener("message", function (event) {
+    if (event.data.type === "footerHeight") {
+      const iframe = document.getElementById("footerFrame");
+      if (iframe) {
+        iframe.style.height = event.data.height + "px";
+      }
+    }
+  });
+</script>

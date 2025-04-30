@@ -200,6 +200,8 @@ section {
   background-color: #555;
 }
 
+/*flecha hacia arriba*/
+
 
 
 
@@ -315,7 +317,9 @@ iframe.footer {
   border: none;
   display: block;
   margin-top: auto;
+  overflow: hidden;
 }
+
 
 /* Términos y condiciones */
 .terminos-main {
