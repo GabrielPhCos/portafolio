@@ -350,26 +350,55 @@ iframe.footer {
   box-sizing: border-box;
 }
 
+/* Contenedor base de cada columna */
+/* Contenedor general de cada columna */
 .columna {
+  position: relative;
   flex: 1 1 300px;
   max-width: 100%;
+  min-height: 250px;
   padding: 1.5em;
   border: 1px solid #444;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   text-align: center;
   color: white;
+  overflow: hidden;
+
+  /* Fondo */
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-blend-mode: overlay;
   background-color: rgba(0, 0, 0, 0.5);
-  /* Parallax simple */
-  background-attachment: fixed; 
-  background-position: center center;
+
+  /* Parallax por defecto desactivado en escritorio */
+  background-attachment: scroll;
 }
 
-/* Imagen de fondo por columna */
+/* Activar parallax solo en pantallas móviles */
+@media (max-width: 768px) {
+  .columna {
+    background-attachment: fixed; /* Activar parallax nativo en móviles */
+  }
+}
+
+/* Fondo degradado encima de la imagen para mejorar legibilidad */
+.columna::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  z-index: 0;
+}
+
+/* Asegura que el contenido quede encima del degradado */
+.columna > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Imagen de fondo para cada columna */
 .columna1 {
   background-image: url('https://i.imgur.com/CjhcsKJ.jpg');
 }
@@ -382,7 +411,7 @@ iframe.footer {
   background-image: url('https://i.imgur.com/ZgvF6xo.jpg');
 }
 
-
+/* Responsivo */
 @media (max-width: 900px) {
   .columna {
     width: 45%;
@@ -397,6 +426,8 @@ iframe.footer {
     justify-content: center;
   }
 }
+
+
 /*para destacar un link*/
 a.link-destacado {
   color: #00aced;

@@ -45,3 +45,23 @@ window.addEventListener("message", function (event) {
     }
   }
 });
+
+//parallax
+window.addEventListener('scroll', () => {
+  document.querySelectorAll('.columna').forEach(col => {
+    const speed = 0.15; // velocidad reducida
+    let offset = window.scrollY * speed;
+
+    // Limitar desplazamiento
+    offset = Math.max(-100, Math.min(offset, 100));
+
+    col.style.backgroundPosition = `center ${offset}px`;
+  });
+});
+
+
+
+
+
+
+
