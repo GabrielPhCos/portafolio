@@ -178,6 +178,28 @@ section {
 }
 
 
+/*opcion regresar en paguinas de galerias*/
+
+.regresar {
+  text-align: center;
+  margin: 2em 0;
+}
+
+.boton-regresar {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.boton-regresar:hover {
+  background-color: #555;
+}
+
 
 
 
