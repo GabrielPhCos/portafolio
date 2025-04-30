@@ -324,10 +324,12 @@ iframe.footer {
 /* Términos y condiciones */
 .terminos-main {
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* Alinea los hijos en columna */
+  align-items: center;     /* Centra horizontalmente */
   padding: 2em;
   margin-top: 70px;
 }
+
 
 .terminos-parrafo {
   max-width: 700px;
