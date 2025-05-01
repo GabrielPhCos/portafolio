@@ -186,19 +186,29 @@ section {
 }
 
 .boton-regresar {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
   padding: 0.75em 1.5em;
   background-color: #333;
   color: white;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1rem;
   transition: background-color 0.3s ease;
 }
 
 .boton-regresar:hover {
   background-color: #555;
 }
+
+.icono-flecha {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+}
+
 
 /*flecha hacia arriba*/
 
