@@ -136,13 +136,16 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 1200px;
+  margin: 2em auto;
+  padding: 0 1em;
+  box-sizing: border-box;
 }
 
 .gallery-link {
-  width: 100%;
-  max-width: 400px; /* Tamaño máximo para cada imagen */
+  flex: 1 1 30%;
+  max-width: 30%;
+  min-width: 250px;
   display: block;
   border: 2px solid transparent;
   border-radius: 8px;
@@ -169,13 +172,21 @@ section {
   transform: scale(1.05);
 }
 
-/* En pantallas grandes, que no pasen de 400px */
-@media (min-width: 768px) {
+/* Responsivo */
+@media (max-width: 900px) {
   .gallery-link {
-    flex: 0 0 45%;
+    flex: 1 1 45%;
     max-width: 45%;
   }
 }
+
+@media (max-width: 600px) {
+  .gallery-link {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
 
 
 /*opcion regresar en paguinas de galerias*/
@@ -210,7 +221,34 @@ section {
 }
 
 
-/*flecha hacia arriba*/
+/*galeria videos*/
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2em;
+  padding: 2em;
+  max-width: 900px;
+  margin: auto;
+}
+
+.video-contenedor {
+  aspect-ratio: 9 / 16; /* Vertical */
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  background-color: #000;
+}
+
+.video-contenedor iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+
 
 
 
@@ -362,82 +400,82 @@ iframe.footer {
   box-sizing: border-box;
 }
 
-/* Contenedor base de cada columna */
-/* Contenedor general de cada columna */
+/* Contenedor base de cada columna con fondo e información */
 .columna {
-  position: relative;
-  flex: 1 1 300px;
-  max-width: 100%;
-  min-height: 250px;
-  padding: 1.5em;
-  border: 1px solid #444;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  color: white;
-  overflow: hidden;
+  position: relative; /* Permite posicionar elementos hijos absolutamente (como el degradado) */
+  flex: 1 1 300px; /* Flex-grow: 1, Flex-shrink: 1, Flex-basis: 300px (ancho mínimo deseado) */
+  max-width: 100%; /* Asegura que no exceda el ancho del contenedor padre */
+  min-height: 250px; /* Altura mínima para mantener el diseño consistente */
+  padding: 1.5em; /* Espaciado interno */
+  border: 1px solid #444; /* Borde sutil */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+  text-align: center; /* Centra el texto */
+  color: white; /* Color del texto */
+  overflow: hidden; /* Oculta cualquier contenido que sobresalga */
 
-  /* Fondo */
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-blend-mode: overlay;
-  background-color: rgba(0, 0, 0, 0.5);
+  /* Estilo del fondo */
+  background-size: cover; /* Asegura que la imagen cubra completamente el contenedor */
+  background-position: center center; /* Centra la imagen de fondo */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-blend-mode: overlay; /* Mezcla el color de fondo con la imagen */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar legibilidad */
 
-  /* Parallax por defecto desactivado en escritorio */
+  /* El parallax está desactivado por defecto en escritorio */
   background-attachment: scroll;
 }
 
-/* Activar parallax solo en pantallas móviles */
+/* Activa el parallax nativo solo en dispositivos móviles (pantallas <= 768px) */
 @media (max-width: 768px) {
   .columna {
-    background-attachment: fixed; /* Activar parallax nativo en móviles */
+    background-attachment: fixed; /* Parallax nativo en móviles */
   }
 }
 
-/* Fondo degradado encima de la imagen para mejorar legibilidad */
+/* Agrega un degradado desde la parte inferior para mejorar la legibilidad del texto */
 .columna::before {
-  content: '';
+  content: ''; /* Elemento pseudo con fondo degradado */
   position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
-  z-index: 0;
+  inset: 0; /* Ocupa todo el contenedor */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent); /* Degradado negro hacia arriba */
+  z-index: 0; /* Ubicado detrás del contenido */
 }
 
-/* Asegura que el contenido quede encima del degradado */
+/* Asegura que el contenido textual esté por encima del degradado */
 .columna > * {
   position: relative;
   z-index: 1;
 }
 
-/* Imagen de fondo para cada columna */
+/* Imagen de fondo personalizada para cada columna */
 .columna1 {
   background-image: url('https://i.imgur.com/CjhcsKJ.jpg');
 }
-
 .columna2 {
   background-image: url('https://i.imgur.com/O8UnScQ.jpg');
 }
-
 .columna3 {
   background-image: url('https://imgur.com/o0mzwvG.jpg');
 }
 
-/* Responsivo */
+/* Diseño responsivo: 2 columnas en tablets */
 @media (max-width: 900px) {
   .columna {
     width: 45%;
   }
 }
 
+/* Diseño responsivo: 1 columna en móviles */
 @media (max-width: 600px) {
   .columna {
     width: 100%;
   }
+
   .footer-redes {
     justify-content: center;
   }
 }
+
 
 
 /*para destacar un link*/
