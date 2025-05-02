@@ -47,6 +47,8 @@ header {
   padding: .5rem 2rem;
 }
 
+/*menu*/
+/* Estilos generales */
 .header {
   position: fixed;
   top: 0;
@@ -78,10 +80,12 @@ header {
   display: none;
 }
 
+/* SOLO aplica en móvil */
 @media (max-width: 768px) {
   .checkbtn {
     display: block;
   }
+
   .menu-icon {
     display: block;
     position: fixed;
@@ -90,6 +94,7 @@ header {
     cursor: pointer;
     z-index: 1100;
   }
+
   .nav-menu ul {
     display: block;
     position: fixed;
@@ -98,24 +103,46 @@ header {
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     width: 100%;
     height: 100vh;
-    right: 0;
     transition: all 0.25s;
+    z-index: 1000;
+    overflow: hidden;
   }
-  .nav-menu ul li {
-    padding: 2rem;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-  }
-  .nav-menu ul li:last-child {
-    background: none;
-    padding: 1rem;
-  }
+
   #check:checked ~ ul {
     left: 0;
   }
+
+  #menu-stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    display: block;
+  }
+
+  .nav-menu ul li {
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+  }
 }
 
+/* En pantallas grandes el canvas no se muestra */
+@media (min-width: 769px) {
+  #menu-stars {
+    display: none !important;
+  }
+}
+
+
+
+
+/**/
 main {
   flex: 1;
   padding: 2em;

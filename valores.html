@@ -14,15 +14,18 @@
         <img src="">
       </div>
       <nav class="nav-menu">
-        <input type="checkbox" id="check">              
-          <label for="check" class="checkbtn">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
           <i class="menu-icon"><img src="img/menu.svg" alt=""></i>
         </label>
         <ul>
+          <!-- Canvas para estrellas solo en móvil -->
+          <canvas id="menu-stars"></canvas>
+
           <li><a href="index.html">Inicio</a></li>
           <li><a href="valores.html">Valores de la sesión</a></li>
           <li><a href="TerminosCondiciones.html">Términos y Condiciones</a></li>
-        </ul>     
+        </ul>
       </nav>
     </header>
     <section class="valores">    
@@ -37,8 +40,6 @@
           Regresar al inicio
         </a>
       </div>
-
-      <br>
         <div class="contenedor-valores">          
           <div class="columna columna1">
             <p><strong>SET ESTUDIO</strong></p>
@@ -53,6 +54,7 @@
             <p><strong>SET VIDEOS ESTUDIO</strong></p>
             <p>Con edición: $25.000</p>
             <p>Sin edición: $25.000</p>
+            <br>
             <p><strong>SET MIXTO</strong></p>
             <p>15 fotos 1 video formato horizontal/vertical $40.000</p>
             <br>
@@ -104,6 +106,7 @@
         <p><strong>Agendar directo a <a href="https://www.instagram.com/gabo.ph.cos/" target="_blank" class="link-destacado">Instagram</a> y estar al tanto de los  <a href="TerminosCondiciones.html" class="link-destacado">terminos y condiciones</a></strong></p>
       </div>
     </section>
+    <script src="app.js"></script>
     </main>
     
     <iframe class="footer" src="footer.html" frameborder="0"></iframe>

@@ -66,7 +66,59 @@ window.addEventListener('scroll', () => {
 });
 
 
+// estrellas 
+  const canvas = document.getElementById("menu-stars");
 
+  if (canvas) {
+    const ctx = canvas.getContext("2d");
+    let stars = [];
+    const numStars = 100;
+
+    function resizeCanvas() {
+      canvas.width = canvas.parentElement.clientWidth;
+      canvas.height = canvas.parentElement.clientHeight;
+    }
+
+    function initStars() {
+      stars = [];
+      for (let i = 0; i < numStars; i++) {
+        stars.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          radius: Math.random() * 1.5,
+          speed: Math.random() * 0.5 + 0.2
+        });
+      }
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "#fff";
+      stars.forEach(star => {
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+        ctx.fill();
+        star.y += star.speed;
+        if (star.y > canvas.height) {
+          star.y = 0;
+          star.x = Math.random() * canvas.width;
+        }
+      });
+      requestAnimationFrame(animate);
+    }
+
+    // Inicia solo si el canvas existe y es visible
+    function startStarsIfMobile() {
+      if (window.innerWidth <= 768) {
+        resizeCanvas();
+        initStars();
+        animate();
+      }
+    }
+
+    window.addEventListener("resize", startStarsIfMobile);
+    window.addEventListener("load", startStarsIfMobile);
+  }
 
 
 
