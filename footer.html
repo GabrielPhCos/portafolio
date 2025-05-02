@@ -9,20 +9,59 @@
       margin: 0;
       padding: 0;
       overflow: hidden;
-      background-color: #111;
       font-family: 'Roboto', sans-serif;
-      text-align: center;
       color: white;
     }
 
+    /* Fondo estrellado animado */
+    .estrellas {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .estrella {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      width: 2px;
+      height: 2px;
+      opacity: 0.8;
+      animation: parpadeo 3s infinite ease-in-out, caer 10s linear infinite;
+    }
+
+    @keyframes parpadeo {
+      0%, 100% { opacity: 0.8; }
+      50% { opacity: 0.2; }
+    }
+
+    @keyframes caer {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(100vh);
+      }
+    }
+
     .footer-contenedor {
+      position: relative;
+      z-index: 1;
+      background: transparent;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       padding: 1em;
       gap: 0.8em;
+      text-align: center;
     }
+
 
     .redes {
       display: flex;
@@ -54,10 +93,6 @@
     }
 
     @media (max-width: 600px) {
-      body {
-        background-color: #2a2a2a;
-      }
-
       .copyright {
         color: #eee;
       }
@@ -65,24 +100,18 @@
   </style>
 </head>
 <body>
+  <div class="estrellas" id="estrellas"></div>
+
   <div class="footer-contenedor">
     <div class="redes">
       <a href="https://www.instagram.com/gabo.ph.cos/" target="_blank" aria-label="Instagram">
-        <svg viewBox="0 0 448 512">
-          <path d="M224,202.66A53.34,53.34,0,1,0,277.34,256,53.38,53.38,0,0,0,224,202.66ZM398.8,112A54.77,54.77,0,1,0,343.9,57.15,54.77,54.77,0,0,0,398.8,112ZM224,137.13A118.87,118.87,0,1,0,342.87,256,118.87,118.87,0,0,0,224,137.13Zm124.71,220.14a83.77,83.77,0,0,1-83.77,83.77H182.06a83.77,83.77,0,0,1-83.77-83.77V182.06a83.77,83.77,0,0,1,83.77-83.77h82.88a83.77,83.77,0,0,1,83.77,83.77Z"/>
-        </svg>
+        <svg viewBox="0 0 448 512"><path d="M224,202.66A53.34,53.34,0,1,0,277.34,256,53.38,53.38,0,0,0,224,202.66ZM398.8,112A54.77,54.77,0,1,0,343.9,57.15,54.77,54.77,0,0,0,398.8,112ZM224,137.13A118.87,118.87,0,1,0,342.87,256,118.87,118.87,0,0,0,224,137.13Zm124.71,220.14a83.77,83.77,0,0,1-83.77,83.77H182.06a83.77,83.77,0,0,1-83.77-83.77V182.06a83.77,83.77,0,0,1,83.77-83.77h82.88a83.77,83.77,0,0,1,83.77,83.77Z"/></svg>
       </a>
-
       <a href="https://www.tiktok.com/@gabophcos" target="_blank" aria-label="TikTok">
-        <svg viewBox="0 0 448 512">
-          <path d="M448,209.2v99.2a165.69,165.69,0,0,1-99.2-31.7V404a108,108,0,1,1-108-108h0V209.2a165.86,165.86,0,0,0,99.2,31.7V104H320V32h56.4a71.55,71.55,0,0,0,71.6,72V209.2Z"/>
-        </svg>
+        <svg viewBox="0 0 448 512"><path d="M448,209.2v99.2a165.69,165.69,0,0,1-99.2-31.7V404a108,108,0,1,1-108-108h0V209.2a165.86,165.86,0,0,0,99.2,31.7V104H320V32h56.4a71.55,71.55,0,0,0,71.6,72V209.2Z"/></svg>
       </a>
-
       <a href="https://www.threads.net/@gabo.ph.cos" target="_blank" aria-label="Threads">
-        <svg viewBox="0 0 448 512">
-          <path d="M224 32C100.3 32 0 132.3 0 256s100.3 224 224 224 224-100.3 224-224S347.7 32 224 32zm65.3 312.3c-4.6 13.6-13.4 25.4-25.1 33.6-11.5 7.8-25.2 11.8-39.5 11.8-19.4 0-37.1-7.7-50.6-21.6-13.5-13.8-21.1-32.3-21.1-51.9v-1.8c0-25.3 11.6-49.1 31.3-65.1-8.3-10.2-12.6-22.9-12.6-36.1 0-32.8 26.7-59.4 59.4-59.4s59.4 26.7 59.4 59.4c0 19.1-9 36.9-24.4 48.3 16.4 14.7 27.3 35.2 29.3 57.4.9 11-.2 22.1-5.1 32.4z"/>
-        </svg>
+        <svg viewBox="0 0 448 512"><path d="M224 32C100.3 32 0 132.3 0 256s100.3 224 224 224 224-100.3 224-224S347.7 32 224 32zm65.3 312.3c-4.6 13.6-13.4 25.4-25.1 33.6-11.5 7.8-25.2 11.8-39.5 11.8-19.4 0-37.1-7.7-50.6-21.6-13.5-13.8-21.1-32.3-21.1-51.9v-1.8c0-25.3 11.6-49.1 31.3-65.1-8.3-10.2-12.6-22.9-12.6-36.1 0-32.8 26.7-59.4 59.4-59.4s59.4 26.7 59.4 59.4c0 19.1-9 36.9-24.4 48.3 16.4 14.7 27.3 35.2 29.3 57.4.9 11-.2 22.1-5.1 32.4z"/></svg>
       </a>
     </div>
 
@@ -90,16 +119,28 @@
       <p>&copy; 2025 Gabriel photo cosplay - Fotografía y Video</p>
     </div>
   </div>
-  <script>
-  function sendHeight() {
-    const height = document.body.scrollHeight;
-    window.parent.postMessage({ type: "footerHeight", height: height }, "*");
-  }
 
-  window.addEventListener("load", sendHeight);
-  window.addEventListener("resize", sendHeight);
-</script>
+  <script>
+    // Generar estrellas animadas
+    const contenedor = document.getElementById('estrellas');
+    for (let i = 0; i < 100; i++) {
+      const estrella = document.createElement('div');
+      estrella.className = 'estrella';
+      estrella.style.left = Math.random() * 100 + 'vw';
+      estrella.style.top = Math.random() * 100 + 'vh';
+      estrella.style.animationDuration = (10 + Math.random() * 10) + 's';
+      estrella.style.animationDelay = (Math.random() * 10) + 's';
+      contenedor.appendChild(estrella);
+    }
+
+    // Enviar altura al contenedor padre (iframe)
+    function sendHeight() {
+      const height = document.body.scrollHeight;
+      window.parent.postMessage({ type: "footerHeight", height: height }, "*");
+    }
+
+    window.addEventListener("load", sendHeight);
+    window.addEventListener("resize", sendHeight);
+  </script>
 </body>
 </html>
-
-

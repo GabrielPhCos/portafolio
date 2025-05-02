@@ -46,18 +46,25 @@ window.addEventListener("message", function (event) {
   }
 });
 
-//parallax
+// Efecto Parallax en elementos con clase .columna
+// Este código ajusta dinámicamente la posición del fondo al hacer scroll, creando un efecto visual de movimiento
+
 window.addEventListener('scroll', () => {
+  // Selecciona todos los elementos con clase .columna
   document.querySelectorAll('.columna').forEach(col => {
-    const speed = 0.15; // velocidad reducida
+    const speed = 0.15; // Factor de velocidad del efecto parallax (más bajo = más sutil)
+
+    // Calcula el desplazamiento vertical basado en el scroll actual
     let offset = window.scrollY * speed;
 
-    // Limitar desplazamiento
+    // Limita el desplazamiento para evitar que el fondo se mueva demasiado
     offset = Math.max(-100, Math.min(offset, 100));
 
+    // Aplica el desplazamiento como posición de fondo
     col.style.backgroundPosition = `center ${offset}px`;
   });
 });
+
 
 
 
