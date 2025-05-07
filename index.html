@@ -1,45 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gabriel photo cosplay - Fotografía y Video</title>
-  <link rel="stylesheet" href="style.css">  
-</head>
-<body>
-  <header class="header">
-    <div>
-      <img src="">
-    </div>
-    <nav class="nav-menu">
-      <input type="checkbox" id="check">
-      <label for="check" class="checkbtn">
-        <i class="menu-icon"><img src="img/menu.svg" alt=""></i>
-      </label>
-      <ul>
-        <!-- Canvas para estrellas solo en móvil -->
-        <canvas id="menu-stars"></canvas>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="valores.html">Valores de la sesión</a></li>
-        <li><a href="TerminosCondiciones.html">Términos y Condiciones</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <div class="gallery-wrapper">
-      <a class="gallery-link" href="cosplay.html">
-        <img src="img/portada eventos copia.webp" alt="Portada Eventos" />
-      </a>
-      <a class="gallery-link" href="cosplayestudio.html">
-        <img src="img/portada estudio copia 2.webp" alt="Portada Estudio" />
-      </a>
-      <a class="gallery-link" href="videos.html">
-        <img src="https://i.imgur.com/tsMV4LH.gif" alt="Videos">
-      </a>
-    </div>
-    <script src="app.js"></script>
-  </main>
-  <iframe class="footer" src="footer.html" frameborder="0" id="footerFrame"></iframe>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Gabriel photo cosplay - Fotografía y Video</title>
+        <link rel="icon" type="image/x-icon" href="img/icons/camera.svg">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="fonts" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header class="header">
+            <div>
+                <img src="" />
+            </div>
+            <nav class="nav-menu">
+                <input type="checkbox" id="check" />
+                <label for="check" class="checkbtn">
+                    <i class="menu-icon"><img src="img/icons/menu.svg" alt="" /></i>
+                </label>
+                <ul>
+                    <!-- Canvas para estrellas solo en móvil -->
+                    <canvas id="menu-stars"></canvas>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="valores.html">Valores de la sesión</a></li>
+                    <li><a href="TerminosCondiciones.html">Términos y Condiciones</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="gallery-wrapper">
+                <a class="gallery-link" href="cosplay.html">
+                    <img
+                        srcset="img/menu/fotos_eventos-400w.webp 540w, img/menu/fotos_eventos-800w.webp 720w, img/menu/fotos_eventos.webp 1024w"
+                        alt="Portada Eventos"
+                    />
+                </a>
+                <a class="gallery-link" href="cosplayestudio.html">
+                    <img
+                        srcset="img/menu/sesiones_estudio-400w.webp 540w, img/menu/sesiones_estudio-800w.webp 720w, img/menu/sesiones_estudio.webp 1024w"
+                        alt="Portada Estudio"
+                    />
+                </a>
+                <a class="gallery-link" href="videos.html">
+                    <img srcset="img/menu/videos_reels-400w.gif 540w, img/menu/videos_reels-800w.gif 720w, img/menu/videos_reels.gif 1024w" alt="Videos" />
+                </a>
+            </div>
+            <script src="app.js"></script>
+        </main>
+        <iframe class="footer" src="footer.html" frameborder="0" id="footerFrame"></iframe>
+    </body>
 </html>

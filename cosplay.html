@@ -1,76 +1,272 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gabriel photo cosplay - Fotografía y Video</title>
-  <link rel="stylesheet" href="style.css">
-  
-</head>
-<body>
-  <header class="header">
-    <div>
-      <img src="">
-    </div>
-    <nav class="nav-menu">
-      <input type="checkbox" id="check">
-      <label for="check" class="checkbtn">
-        <i class="menu-icon"><img src="img/menu.svg" alt=""></i>
-      </label>
-      <ul>
-        <!-- Canvas para estrellas solo en móvil -->
-        <canvas id="menu-stars"></canvas>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Gabriel photo cosplay - Fotografía y Video</title>
+        <link rel="icon" type="image/x-icon" href="img/icons/camera.svg">
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header class="header">
+            <div>
+                <img src="" />
+            </div>
+            <nav class="nav-menu">
+                <input type="checkbox" id="check" />
+                <label for="check" class="checkbtn">
+                    <i class="menu-icon"><img src="img/icons/menu.svg" alt="" /></i>
+                </label>
+                <ul>
+                    <!-- Canvas para estrellas solo en móvil -->
+                    <canvas id="menu-stars"></canvas>
 
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="valores.html">Valores de la sesión</a></li>
-        <li><a href="TerminosCondiciones.html">Términos y Condiciones</a></li>
-      </ul>
-    </nav>
-  </header>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="valores.html">Valores de la sesión</a></li>
+                    <li><a href="TerminosCondiciones.html">Términos y Condiciones</a></li>
+                </ul>
+            </nav>
+        </header>
 
+        <main>
+            <div class="regresar">
+                <a href="index.html" class="boton-regresar">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icono-flecha">
+                        <path
+                            fill="currentColor"
+                            d="M34.52 239l194.34-194.34c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.37 9.37 9.37 24.57 0 33.94L131.94 256l153.53 154.73c9.37 9.37 9.37 24.57 0 33.94l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 273c-9.37-9.37-9.37-24.57 0-34z"
+                        />
+                    </svg>
+                    Regresar al inicio
+                </a>
+            </div>
 
+            <!-- <h2>Mi trabajo</h2> -->
+            <div class="grid">
+                <img
+                    data-lightbox
+                    tabindex="0"
+                    srcset="
+                        img/foto-cosplayers/cosplay-1-400w.webp  540w,
+                        img/foto-cosplayers/cosplay-1-800w.webp  720w,
+                        img/foto-cosplayers/cosplay-1.webp      1024w
+                    "
+                    alt="Foto cosplayer 1"
+                />
+                <img
+                    data-lightbox
+                    tabindex="0"
+                    srcset="
+                        img/foto-cosplayers/cosplay-2-400w.webp  540w,
+                        img/foto-cosplayers/cosplay-2-800w.webp  720w,
+                        img/foto-cosplayers/cosplay-2.webp      1024w
+                    "
+                    alt="Foto cosplayer 2"
+                />
+                <img
+                    data-lightbox
+                    tabindex="0"
+                    srcset="
+                        img/foto-cosplayers/cosplay-3-400w.webp  540w,
+                        img/foto-cosplayers/cosplay-3-800w.webp  720w,
+                        img/foto-cosplayers/cosplay-3.webp      1024w
+                    "
+                    loading="lazy"
+                    alt="Foto cosplayer 3"
+                />
+                <img
+                    data-lightbox
+                    tabindex="0"
+                    srcset="
+                        img/foto-cosplayers/cosplay-4-400w.webp  540w,
+                        img/foto-cosplayers/cosplay-4-800w.webp  720w,
+                        img/foto-cosplayers/cosplay-4.webp      1024w
+                    "
+                    loading="lazy"
+                    alt="Foto cosplayer 4"
+                />
+                <img
+                    data-lightbox
+                    tabindex="0"
+                    srcset="
+                        img/foto-cosplayers/cosplay-5-400w.webp  540w,
+                        img/foto-cosplayers/cosplay-5-800w.webp  720w,
+                        img/foto-cosplayers/cosplay-5.webp      1024w
+                    "
+                    loading="lazy"
+                    alt="Foto cosplayer 5"
+                />
+                <img
+                    data-lightbox
+                    tabindex="0"
+                    srcset="
+                        img/foto-cosplayers/cosplay-6-400w.webp  540w,
+                        img/foto-cosplayers/cosplay-6-800w.webp  720w,
+                        img/foto-cosplayers/cosplay-6.webp      1024w
+                    "
+                    loading="lazy"
+                    alt="Foto cosplayer 6"
+                />
+                <img
+                    data-lightbox
+                    tabindex="0"
+                    srcset="
+                        img/foto-cosplayers/cosplay-7-400w.webp  540w,
+                        img/foto-cosplayers/cosplay-7-800w.webp  720w,
+                        img/foto-cosplayers/cosplay-7.webp      1024w
+                    "
+                    loading="lazy"
+                    alt="Foto cosplayer 7"
+                />
+                <img
+                    data-lightbox
+                    tabindex="0"
+                    srcset="
+                        img/foto-cosplayers/cosplay-8-400w.webp  540w,
+                        img/foto-cosplayers/cosplay-8-800w.webp  720w,
+                        img/foto-cosplayers/cosplay-8.webp      1024w
+                    "
+                    loading="lazy"
+                    alt="Foto cosplayer 8"
+                />
+                <img
+                    data-lightbox
+                    tabindex="0"
+                    srcset="
+                        img/foto-cosplayers/cosplay-9-400w.webp  540w,
+                        img/foto-cosplayers/cosplay-9-800w.webp  720w,
+                        img/foto-cosplayers/cosplay-9.webp      1024w
+                    "
+                    loading="lazy"
+                    alt="Foto cosplayer 9"
+                />
+                <img
+                    data-lightbox
+                    tabindex="0"
+                    srcset="
+                        img/foto-cosplayers/cosplay-10-400w.webp  540w,
+                        img/foto-cosplayers/cosplay-10-800w.webp  720w,
+                        img/foto-cosplayers/cosplay-10.webp      1024w
+                    "
+                    loading="lazy"
+                    alt="Foto cosplayer 10"
+                />
+                <img
+                    data-lightbox
+                    tabindex="0"
+                    srcset="
+                        img/foto-cosplayers/cosplay-11-400w.webp  540w,
+                        img/foto-cosplayers/cosplay-11-800w.webp  720w,
+                        img/foto-cosplayers/cosplay-11.webp      1024w
+                    "
+                    loading="lazy"
+                    alt="Foto cosplayer 11"
+                />
+                <img
+                    data-lightbox
+                    tabindex="0"
+                    srcset="
+                        img/foto-cosplayers/cosplay-12-400w.webp  540w,
+                        img/foto-cosplayers/cosplay-12-800w.webp  720w,
+                        img/foto-cosplayers/cosplay-12.webp      1024w
+                    "
+                    loading="lazy"
+                    alt="Foto cosplayer 12"
+                />
+                <img
+                    data-lightbox
+                    tabindex="0"
+                    srcset="
+                        img/foto-cosplayers/cosplay-13-400w.webp  540w,
+                        img/foto-cosplayers/cosplay-13-800w.webp  720w,
+                        img/foto-cosplayers/cosplay-13.webp      1024w
+                    "
+                    loading="lazy"
+                    alt="Foto cosplayer 13"
+                />
+                <img
+                    data-lightbox
+                    tabindex="0"
+                    srcset="
+                        img/foto-cosplayers/cosplay-14-400w.webp  540w,
+                        img/foto-cosplayers/cosplay-14-800w.webp  720w,
+                        img/foto-cosplayers/cosplay-14.webp      1024w
+                    "
+                    loading="lazy"
+                    alt="Foto cosplayer 14"
+                />
+                <img
+                    data-lightbox
+                    tabindex="0"
+                    srcset="
+                        img/foto-cosplayers/cosplay-15-400w.webp  540w,
+                        img/foto-cosplayers/cosplay-15-800w.webp  720w,
+                        img/foto-cosplayers/cosplay-15.webp      1024w
+                    "
+                    loading="lazy"
+                    alt="Foto cosplayer 15"
+                />
+                <img
+                    data-lightbox
+                    tabindex="0"
+                    srcset="
+                        img/foto-cosplayers/cosplay-16-400w.webp  540w,
+                        img/foto-cosplayers/cosplay-16-800w.webp  720w,
+                        img/foto-cosplayers/cosplay-16.webp      1024w
+                    "
+                    loading="lazy"
+                    alt="Foto cosplayer 16"
+                />
+                <img
+                    data-lightbox
+                    tabindex="0"
+                    srcset="
+                        img/foto-cosplayers/cosplay-17-400w.webp  540w,
+                        img/foto-cosplayers/cosplay-17-800w.webp  720w,
+                        img/foto-cosplayers/cosplay-17.webp      1024w
+                    "
+                    loading="lazy"
+                    alt="Foto cosplayer 17"
+                />
+                <img
+                    data-lightbox
+                    tabindex="0"
+                    srcset="
+                        img/foto-cosplayers/cosplay-18-400w.webp  540w,
+                        img/foto-cosplayers/cosplay-18-800w.webp  720w,
+                        img/foto-cosplayers/cosplay-18.webp      1024w
+                    "
+                    loading="lazy"
+                    alt="Foto cosplayer 18"
+                />
+                <img
+                    data-lightbox
+                    tabindex="0"
+                    srcset="
+                        img/foto-cosplayers/cosplay-19-400w.webp  540w,
+                        img/foto-cosplayers/cosplay-19-800w.webp  720w,
+                        img/foto-cosplayers/cosplay-19.webp      1024w
+                    "
+                    loading="lazy"
+                    alt="Foto cosplayer 19"
+                />
+                <img
+                    data-lightbox
+                    tabindex="0"
+                    srcset="
+                        img/foto-cosplayers/cosplay-20-400w.webp  540w,
+                        img/foto-cosplayers/cosplay-20-800w.webp  720w,
+                        img/foto-cosplayers/cosplay-20.webp      1024w
+                    "
+                    loading="lazy"
+                    alt="Foto cosplayer 20"
+                />
 
-<main>
-  
-
-  <div class="regresar">
-    <a href="index.html" class="boton-regresar">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icono-flecha">
-        <path fill="currentColor" d="M34.52 239l194.34-194.34c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.37 9.37 9.37 24.57 0 33.94L131.94 256l153.53 154.73c9.37 9.37 9.37 24.57 0 33.94l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 273c-9.37-9.37-9.37-24.57 0-34z"/>
-      </svg>
-      Regresar al inicio
-    </a>
-  </div>
-
-  <!-- <h2>Mi trabajo</h2> -->
-  <div class="grid">
-    
-    <img data-lightbox tabindex="0" src="img/fotos/DSC09931-Mejorado-NR-Editar.webp" alt="Foto DSC09931-Mejorado-NR-Editar">
-    <img data-lightbox tabindex="0" src="img/fotos/DSC01461.webp" alt="Foto DSC01461">
-    <img data-lightbox tabindex="0" src="img/fotos/DSC02220-Mejorado-NR.webp" alt="Foto DSC02220-Mejorado-NR">
-    <img data-lightbox tabindex="0" src="img/fotos/DSC02731-Mejorado-NR.webp" alt="Foto DSC02731-Mejorado-NR">
-    <img data-lightbox tabindex="0" src="img/fotos/DSC02809-Mejorado-NR.webp" alt="Foto DSC02809-Mejorado-NR">
-    <img data-lightbox tabindex="0" src="img/fotos/DSC02932-Mejorado-NR-Editar.webp" alt="Foto DSC02932-Mejorado-NR-Editar">
-    <img data-lightbox tabindex="0" src="img/fotos/DSC04443.webp" alt="Foto DSC04443">
-    <img data-lightbox tabindex="0" src="img/fotos/DSC04762-Mejorado-NR-Editar copia.webp" alt="Foto DSC04762-Mejorado-NR-Editar copia">
-    <img data-lightbox tabindex="0" src="img/fotos/DSC04955-Mejorado-NR-Editar copia.webp" alt="Foto DSC04955-Mejorado-NR-Editar copia">
-    <img data-lightbox tabindex="0" src="img/fotos/DSC05077-Mejorado-NR copia.webp" alt="Foto DSC05077-Mejorado-NR copia">
-    <img data-lightbox tabindex="0" src="img/fotos/DSC06100-Mejorado-NR.webp" alt="Foto DSC06100-Mejorado-NR">
-    <img data-lightbox tabindex="0" src="img/fotos/DSC06238-Mejorado-NR-Editar.webp" alt="Foto DSC06238-Mejorado-NR-Editar">
-    <img data-lightbox tabindex="0" src="img/fotos/DSC07611-Mejorado-NR.webp" alt="Foto DSC07611-Mejorado-NR">
-    <img data-lightbox tabindex="0" src="img/fotos/DSC07634-Mejorado-NR-Editar.webp" alt="Foto DSC07634-Mejorado-NR-Editar">
-    <img data-lightbox tabindex="0" src="img/fotos/DSC07640-Mejorado-NR-Editar.webp" alt="Foto DSC07640-Mejorado-NR-Editar">
-    <img data-lightbox tabindex="0" src="img/fotos/DSC08586-Mejorado-NR.webp" alt="Foto DSC08586-Mejorado-NR">
-    <img data-lightbox tabindex="0" src="img/fotos/DSC08643-Mejorado-NR.webp" alt="Foto DSC08643-Mejorado-NR">
-    <img data-lightbox tabindex="0" src="img/fotos/DSC08858.webp" alt="Foto DSC08858">
-    <img data-lightbox tabindex="0" src="img/fotos/DSC09278-Mejorado-NR.webp" alt="Foto DSC09278-Mejorado-NR">
-    <img data-lightbox tabindex="0" src="img/fotos/DSC09867-Mejorado-NR.webp" alt="Foto DSC09867-Mejorado-NR">
-
-    <!-- Agrega más imágenes según necesites -->
-  </div>
-  <script src="app.js"></script>
-</main>
-  <iframe class="footer" src="footer.html" frameborder="0"></iframe>
-</body>
+                <!-- Agrega más imágenes según necesites -->
+            </div>
+            <script src="app.js"></script>
+        </main>
+        <iframe title="footer" class="footer" src="footer.html" frameborder="0"></iframe>
+    </body>
 </html>
