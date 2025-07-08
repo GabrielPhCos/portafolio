@@ -435,7 +435,6 @@ iframe.footer {
   box-sizing: border-box;
 }
 
-
 /* Contenedor base de cada columna con fondo e información */
 .columna {
   position: relative; /* Permite posicionar elementos hijos absolutamente (como el degradado) */
@@ -461,31 +460,12 @@ iframe.footer {
   background-attachment: scroll;
 }
 
-@media (max-width: 600px) {
-  .contenedor-valores {
-    padding: 0;
-    max-width: 100vw;
-  }
-
+/* Activa el parallax nativo solo en dispositivos móviles (pantallas <= 768px) */
+@media (max-width: 768px) {
   .columna {
-    width: 95%;
-    margin: 1em auto;
-    padding: 1.2em;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    background-attachment: fixed; /* Reaplica el parallax */
-  }
-
-  .columna p {
-    text-align: left;
-    margin-bottom: 0.5em;
-  }
-
-  .footer-redes {
-    justify-content: center;
+    background-attachment: fixed; /* Parallax nativo en móviles */
   }
 }
-
 
 /* Agrega un degradado desde la parte inferior para mejorar la legibilidad del texto */
 .columna::before {
@@ -504,10 +484,10 @@ iframe.footer {
 
 /* Imagen de fondo personalizada para cada columna */
 .columna1 {
-  background-image: url('https://i.imgur.com/CjhcsKJ.jpg');
+  background-image: url('img/valores eventos.webp');
 }
 .columna2 {
-  background-image: url('https://i.imgur.com/O8UnScQ.jpg');
+  background-image: url('img/valores estudio.webp');
 }
 .columna3 {
   background-image: url('https://imgur.com/o0mzwvG.jpg');
