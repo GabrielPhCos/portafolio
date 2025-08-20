@@ -484,10 +484,10 @@ iframe.footer {
 
 /* Imagen de fondo personalizada para cada columna */
 .columna1 {
-  background-image: url('img/valores eventos.webp');
+  background-image: url('pimg/valores estudio.webp');
 }
 .columna2 {
-  background-image: url('img/valores estudio.webp');
+  background-image: url('img/valores eventos.web');
 }
 .columna3 {
   background-image: url('https://imgur.com/o0mzwvG.jpg');
@@ -515,4 +515,5 @@ iframe.footer {
 a.link-destacado {
   color: #00aced;
   text-decoration: underline;
+
 }
